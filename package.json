@@ -1,0 +1,36 @@
+{
+  "name": "tdown",
+  "version": "1.0.0",
+  "description": "Professional Terminal Download Manager",
+  "main": "dist/daemon/index.js",
+  "bin": {
+    "tdown": "./dist/bin/tdown.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "daemon": "ts-node src/daemon/index.ts",
+    "client": "ts-node src/client/index.ts",
+    "start:daemon": "node dist/daemon/index.js",
+    "start:client": "node dist/client/index.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "express": "^4.19.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "undici": "^6.19.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.25",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.2.0",
+    "@types/ws": "^8.5.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

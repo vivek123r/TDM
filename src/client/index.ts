@@ -171,7 +171,6 @@ async function main() {
     left: 2,
     width: 54,
     height: 1,
-    inputOnFocus: true,
     style: {
       bg: 'grey',
       fg: 'white',
@@ -194,7 +193,6 @@ async function main() {
     left: 2,
     width: 54,
     height: 1,
-    inputOnFocus: true,
     style: {
       bg: 'grey',
       fg: 'white',
@@ -298,7 +296,6 @@ async function main() {
     left: 1,
     width: 41,
     height: 1,
-    inputOnFocus: true,
     style: {
       bg: 'black',
       fg: 'white',

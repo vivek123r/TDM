@@ -9,7 +9,7 @@ const PORT = config.port;
 // Helper to check if daemon is running
 function checkDaemon(): Promise<boolean> {
   return new Promise((resolve) => {
-    const req = http.get(`http://localhost:${PORT}/stats`, (res) => {
+    const req = http.get(`http://localhost:${PORT}/api/stats`, (res) => {
       resolve(res.statusCode === 200);
     });
     req.on('error', () => {
@@ -61,6 +61,7 @@ async function startDaemonDetached() {
   const child = spawn(process.execPath, [daemonPath], {
     detached: true,
     stdio: 'ignore', // Run silently in background
+    windowsHide: true, // Hide the spawned console window on Windows
   });
   child.unref(); // Let the parent process exit without waiting for the child
 }
